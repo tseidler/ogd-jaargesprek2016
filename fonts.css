@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'determinationSans';
+  src: url('assets/determinationSans.woff2') format('woff2'),
+       url('assets/determinationSans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'determinationMono';
+  src: url('assets/determinationMono.woff2') format('woff2'),
+       url('assets/determinationMono.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
