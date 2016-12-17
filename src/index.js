@@ -1,7 +1,11 @@
-import TextRenderer from 'jaargesprek2016/textrenderer';
+import Navigator from 'jaargesprek2016/navigator';
+import {data} from 'jaargesprek2016/questions_answers';
 
-let textRenderer = new TextRenderer(
-  document.querySelector('#textCanvas'),
-  'Vraag 1: caek caek caek',
-  'Antwoord antwoord antwoord antwoord op vraag vraag vraag, blabla, antwoord bla antwoord'
-);
+let navigator = new Navigator({
+  'data':   data,
+  'layers': {
+    'text':       document.querySelector('#layer_text'),
+    'background1': document.querySelector('#layer_background1'),
+    'background2': document.querySelector('#layer_background2')
+  }
+});
