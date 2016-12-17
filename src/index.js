@@ -1,3 +1,4 @@
-import VraagRenderer from 'jaargesprek2016/vraagrenderer';
+import TextRenderer from 'jaargesprek2016/textrenderer';
 
-let vraagRenderer1 = new VraagRenderer(document.querySelector('#canvas1'));
+let textRenderer = new TextRenderer(document.querySelector('#textCanvas'));
+textRenderer.setText('Vraag 1: caek caek caek', 'Antwoord antwoord antwoord antwoord op vraag vraag vraag, blabla, antwoord bla antwoord', 100);
