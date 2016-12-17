@@ -39,7 +39,7 @@ SystemJS.config({
   },
   packages: {
     "jaargesprek2016": {
-      "main": "jaargesprek2016.js"
+      "main": "index.js"
     }
   }
 });
