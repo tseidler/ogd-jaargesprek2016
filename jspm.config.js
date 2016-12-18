@@ -2,7 +2,8 @@ SystemJS.config({
   paths: {
     "github:": "jspm_packages/github/",
     "npm:": "jspm_packages/npm/",
-    "jaargesprek2016/": "src/"
+    "jaargesprek2016/": "src/",
+    "backgrounds": "src/backgrounds/"
   },
   browserConfig: {
     "baseURL": "/"
