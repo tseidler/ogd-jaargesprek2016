@@ -37,7 +37,6 @@ export default class Navigator {
 
   renderCurrentQuestion() {
     let question = this.currentQuestion();
-
     this.textRenderer.setText(question.question, question.answer);
     this.textRenderer.render();
   }
@@ -45,6 +44,7 @@ export default class Navigator {
   swapAndRenderBackground() {
     let question = this.currentQuestion();
     let prevBackground = this.backgrounds[this.activeBackgroundNumber].renderObject;
+
     if(prevBackground) {
       prevBackground.fadeOut();
     }
