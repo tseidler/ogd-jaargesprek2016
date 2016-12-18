@@ -8,7 +8,8 @@ export const data = [
       type: Background,
       options: {
         styles: {
-          backgroundColor: 'pink'
+          background: 'url(/assets/coconut_small.png)',
+          backgroundSize: 'cover'
         }
       },
       fade_time: 1000
