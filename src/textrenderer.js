@@ -6,6 +6,7 @@ export default class TextRenderer {
   constructor(canvasElement, questionText, answerText) {
     this.canvas = canvasElement;
     this.context = this.canvas.getContext('2d');
+    this.textColor = '#FFF';
 
     this.questionTextWidth = 0;
     this.answerFontSize = DEFAULT_ANSWER_FONT_SIZE;
@@ -27,8 +28,14 @@ export default class TextRenderer {
     this.answer = answer;
   }
 
+  setTextColor(color) {
+    this.textColor = color;
+  }
+
   render() {
     this.clearCanvas();
+    this.context.fillStyle = '#FFF';
+    this.context.strokeStyle = '#000';
     this.questionTextWidth = this.renderQuestion();
     this.renderAnswer();
   }
@@ -40,7 +47,8 @@ export default class TextRenderer {
     let x = Math.max(50, (this.canvas.width - question_width)/2);
     let y = this.yPos();
 
-    this.context.fillStyle = '#FFF';
+    this.context.lineWidth = 5;
+    this.context.strokeText(this.question, x, y);
     this.context.fillText(this.question, x, y);
 
     return question_width;
@@ -61,7 +69,7 @@ export default class TextRenderer {
 
   renderAnswer() {
     this.context.font = `${this.answerFontSize}pt determinationMono`;
-    this.context.fillStyle = '#FFF';
+    this.context.lineWidth = 4;
 
     let max_width = this.canvas.width * .8;
     let x = (this.canvas.width - max_width) / 2;
@@ -81,6 +89,7 @@ export default class TextRenderer {
       let metrics = this.context.measureText(test_line);
 
       if(metrics.width > max_width && n > 0) {
+        this.context.strokeText(line, x, y);
         this.context.fillText(line, x, y);
         line = words[n] + ' ';
         y += line_height;
@@ -89,6 +98,7 @@ export default class TextRenderer {
         line = test_line;
       }
     }
+    this.context.strokeText(line, x, y);
     this.context.fillText(line, x, y);
   }
 
