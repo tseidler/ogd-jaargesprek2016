@@ -27,7 +27,7 @@ export default class TextRenderer {
     this.answer = answer;
   }
 
-  drawText() {
+  render() {
     this.clearCanvas();
     this.questionTextWidth = this.renderQuestion();
     this.renderAnswer();
@@ -103,7 +103,7 @@ export default class TextRenderer {
     this.canvas.width = window.innerWidth;
     this.canvas.height = window.innerHeight;
 
-    this.drawText();
+    this.render();
   }
 
   yPos() {
