@@ -1,5 +1,45 @@
 import Background from 'backgrounds/background';
 
+
+export const images = [
+  {
+    name: 'coconut_logo',
+    URI: '/assets/coconut_logo.png'
+  },
+  {
+    name: 'coconut_milk',
+    URI: '/assets/coconut_milk.png'
+  },
+  {
+    name: 'coconut_kennis',
+    URI: '/assets/kennis_100.png'
+  },
+  {
+    name: 'coconut_milk',
+    URI: '/assets/coconut_milk2.png'
+  },
+  {
+    name: 'ruby_logo',
+    URI: '/assets/ruby_logo1.png'
+  },
+  {
+    name: 'ruby_silver',
+    URI: '/assets/ruby_cert_silver.png'
+  },
+  {
+    name: 'ruby_gold',
+    URI: '/assets/ruby_cert_gold.png'
+  },
+  {
+    name: 'like',
+    URI: '/assets/like.png'
+  },
+  {
+    name: 'happy',
+    URI: '/assets/smiley_happy.png'
+  }
+];
+
 export const data = [
   {
     question: 'Hoe bevalt het bij OGD? Wat vind je goed gaan? Wat kan beter?',
@@ -25,23 +65,23 @@ export const data = [
           backgroundColor: 'orange'
         }
       },
-      fade_time: 1000
+      fade_time: 5000
     }
   },
   {
-    question: 'Beschrijf wat je qua kennis hebt ontwikkeld het afgelopen halfjaar.',
+    question: 'Beschrijf wat je qua kennis hebt ontwikkeld het afgelopen jaar.',
     answer: 'placeholder',
   },
   {
-    question: 'Beschrijf hoe je in ervaring bent gegroeid het afgelopen halfjaar.',
+    question: 'Beschrijf hoe je in ervaring bent gegroeid het afgelopen jaar.',
     answer: 'placeholder',
   },
   {
-    question: 'Beschrijf hoe je persoonlijk bent gegroeid in het afgelopen halfjaar.',
+    question: 'Beschrijf hoe je persoonlijk bent gegroeid in het afgelopen jaar.',
     answer: 'placeholder',
   },
   {
-    question: 'Beschrijf iets uit het afgelopen halfjaar waar je trots op bent.',
+    question: 'Beschrijf iets uit het afgelopen jaar waar je trots op bent.',
     answer: 'placeholder',
   },
   {
@@ -61,7 +101,7 @@ export const data = [
     answer: 'placeholder',
   },
   {
-    question: 'Welke ervaring wil je het komende halfjaar opdoen?',
+    question: 'Welke ervaring wil je het komende jaar opdoen?',
     answer: 'placeholder',
   },
   {
