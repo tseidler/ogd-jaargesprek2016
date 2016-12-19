@@ -1,5 +1,5 @@
 import Background from 'backgrounds/background';
-
+import SpriteBackground from 'backgrounds/spritebackground';
 
 export const images = [
   {
@@ -48,7 +48,7 @@ export const data = [
       type: Background,
       options: {
         styles: {
-          background: 'url(/assets/coconut_small.png)',
+          background: 'url(/assets/background_ogd_bus.jpg)',
           backgroundSize: 'cover'
         }
       },
@@ -62,7 +62,8 @@ export const data = [
       type: Background,
       options: {
         styles: {
-          backgroundColor: 'orange'
+          background: 'url(/assets/background_coconut.png)',
+          backgroundSize: 'cover'
         }
       },
       fade_time: 5000
@@ -71,18 +72,50 @@ export const data = [
   {
     question: 'Beschrijf wat je qua kennis hebt ontwikkeld het afgelopen jaar.',
     answer: 'placeholder',
+    background: {
+      type: SpriteBackground,
+      options: {
+        sprites: ['coconut_logo', 'ruby_logo', 'coconut_kennis']
+      }
+    }
   },
   {
     question: 'Beschrijf hoe je in ervaring bent gegroeid het afgelopen jaar.',
     answer: 'placeholder',
+    background: {
+      type: Background,
+      options: {
+        styles: {
+          background: 'linear-gradient(to right, red, yellow)'
+        }
+      }
+    }
   },
   {
     question: 'Beschrijf hoe je persoonlijk bent gegroeid in het afgelopen jaar.',
     answer: 'placeholder',
+    background: {
+      type: Background,
+      options: {
+        styles: {
+          background: 'linear-gradient(yellow, green)'
+        }
+      }
+    }
   },
   {
     question: 'Beschrijf iets uit het afgelopen jaar waar je trots op bent.',
     answer: 'placeholder',
+    background: {
+      type: Background,
+      options: {
+        styles: {
+          background: 'url(/assets/background_achievement.jpg)',
+          backgroundSize: 'cover'
+        }
+      },
+      fade_time: 5000
+    }
   },
   {
     question: 'Welke belemmeringen ervaar in je in je werk? En hoe kan OGD jou daarmee helpen?',
@@ -99,6 +132,16 @@ export const data = [
   {
     question: 'Wat wil je gaan doen op het gebied van examens en cursussen?',
     answer: 'placeholder',
+    background: {
+      type: SpriteBackground,
+      options: {
+        sprites: ['coconut_logo', 'ruby_logo', 'ruby_silver', 'ruby_gold', 'javascript'],
+        styles: {
+          background: 'none',
+          backgroundColor: 'orange'
+        }
+      },
+    }
   },
   {
     question: 'Welke ervaring wil je het komende jaar opdoen?',
