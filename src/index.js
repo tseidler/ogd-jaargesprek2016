@@ -7,7 +7,7 @@ let imageCache = new ImageCache();
 imageCache.load(images, () => {
   let navigator = new Navigator({
     'data':   data,
-    'images': images,
+    'images': imageCache,
     'layers': {
       'text':       document.querySelector('#layer_text'),
       'background1': document.querySelector('#layer_background1'),

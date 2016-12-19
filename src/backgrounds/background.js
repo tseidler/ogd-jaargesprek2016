@@ -1,9 +1,9 @@
 const FADE_INTERVAL_SPEED = 100;
 const DEFAULT_OPTIONS = {
   styles: {
+    backgroundImage: 'none',
     backgroundColor: '#FFF'
-  },
-  fade_time: 1000
+  }
 };
 
 export default class Background {
@@ -19,6 +19,13 @@ export default class Background {
     for(let prop in this.styles) {
       this.canvas.style[prop] = this.styles[prop];
     }
+
+    window.requestAnimationFrame(() => this.clearCanvas);
+  }
+
+  stop() {
+    this.running = false;
+    this.clearCanvas();
   }
 
   fadeIn(time_ms = 2000) {
@@ -46,5 +53,9 @@ export default class Background {
     } else {
       setTimeout(this.changeOpacity.bind(this, target, change, doneCallback), FADE_INTERVAL_SPEED);
     }
+  }
+
+  clearCanvas() {
+    this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
   }
 }

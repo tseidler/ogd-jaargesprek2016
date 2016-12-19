@@ -3,8 +3,10 @@ import TextRenderer from 'jaargesprek2016/textrenderer';
 export default class Navigator {
   constructor(options) {
     this.questionData = options.data;
+    this.images = options.images;
     this.currentQuestionIndex = -1;
-    this.textRenderer = new TextRenderer(options.layers.text, 'Jaargesprek', 'Terry Seidler. 22 december 2016');
+    let right = String.fromCharCode(8658);
+    this.textRenderer = new TextRenderer(options.layers.text, 'Jaargesprek', `Terry Seidler. 22 december 2016 (press ${right})`);
     this.backgrounds = [
       { element: options.layers.background1, renderObject: null },
       { element: options.layers.background2, renderObject: null }
@@ -43,10 +45,14 @@ export default class Navigator {
 
   swapAndRenderBackground() {
     let question = this.currentQuestion();
+    if(question.background.options.hasOwnProperty('sprites')) {
+      question.background.options.images = this.images;
+    }
     let prevBackground = this.backgrounds[this.activeBackgroundNumber].renderObject;
 
     if(prevBackground) {
-      prevBackground.fadeOut();
+      prevBackground.clearCanvas();
+      prevBackground.fadeOut().then(() => prevBackground.stop());
     }
 
     this.activeBackgroundNumber = (this.activeBackgroundNumber+1)%2;
