@@ -37,6 +37,14 @@ export const images = [
   {
     name: 'happy',
     URI: '/assets/smiley_happy.png'
+  },
+  {
+    name: 'javascript_logo',
+    URI: '/assets/javascript_logo.png'
+  },
+  {
+    name: 'rails_logo',
+    URI: '/assets/rails_logo.png'
   }
 ];
 
@@ -75,7 +83,8 @@ export const data = [
     background: {
       type: SpriteBackground,
       options: {
-        sprites: ['coconut_logo', 'ruby_logo', 'coconut_kennis']
+        sprites: ['coconut_logo', 'ruby_logo', 'coconut_kennis', 'javascript_logo', 'rails_logo'],
+        numSprites: 25
       }
     }
   },
@@ -110,24 +119,50 @@ export const data = [
       type: Background,
       options: {
         styles: {
-          background: 'url(/assets/background_achievement.jpg)',
+          background: 'url(/assets/background_postnl.png)',
           backgroundSize: 'cover'
         }
-      },
-      fade_time: 5000
+      }
     }
   },
   {
     question: 'Welke belemmeringen ervaar in je in je werk? En hoe kan OGD jou daarmee helpen?',
     answer: 'placeholder',
+    background: {
+      type: Background,
+      options: {
+        styles: {
+          background: 'url(/assets/background_belemmeringen.png)',
+          backgroundSize: 'cover'
+        }
+      }
+    }
   },
   {
     question: 'Waar liggen jouw ambities, wat vind je leuk, waar krijg je energie van?',
     answer: 'placeholder',
+    background: {
+      type: Background,
+      options: {
+        styles: {
+          background: 'url(/assets/background_ambities.png)',
+          backgroundSize: 'cover'
+        }
+      }
+    }
   },
   {
     question: 'Stel: Het is 2 jaar verder. Waar kijk je op terug?',
     answer: 'placeholder',
+    background: {
+      type: Background,
+      options: {
+        styles: {
+          background: 'url(/assets/background_huis.png)',
+          backgroundSize: 'cover'
+        }
+      }
+    }
   },
   {
     question: 'Wat wil je gaan doen op het gebied van examens en cursussen?',
@@ -135,10 +170,11 @@ export const data = [
     background: {
       type: SpriteBackground,
       options: {
-        sprites: ['coconut_logo', 'ruby_logo', 'ruby_silver', 'ruby_gold', 'javascript'],
+        sprites: ['coconut_logo', 'ruby_logo', 'ruby_silver', 'ruby_gold', 'rails_logo'],
+        numSprites: 15,
         styles: {
           background: 'none',
-          backgroundColor: 'orange'
+          backgroundColor: '#c3ffbb'
         }
       },
     }
@@ -146,17 +182,55 @@ export const data = [
   {
     question: 'Welke ervaring wil je het komende jaar opdoen?',
     answer: 'placeholder',
+    background: {
+      type: SpriteBackground,
+      options: {
+        sprites: ['coconut_logo', 'ruby_logo', 'javascript_logo', 'coconut_kennis', 'rails_logo'],
+        numSprites: 12,
+        styles: {
+          background: 'none',
+          backgroundColor: '#bbd9ff'
+        }
+      },
+    }
   },
   {
     question: 'Hoe wil je je persoonlijk gaan ontwikkelen?',
     answer: 'placeholder',
+    background: {
+      type: Background,
+      options: {
+        styles: {
+          background: 'url(/assets/background_achievement.jpg)',
+          backgroundSize: 'cover'
+        }
+      }
+    }
   },
   {
     question: 'Hoe ga je die ontwikkelingen verwezenlijken? Kunnen we je hierin ondersteunen?',
     answer: 'placeholder',
+    background: {
+      type: Background,
+      options: {
+        styles: {
+          background: 'url(/assets/background_support.png)',
+          backgroundSize: 'cover'
+        }
+      }
+    }
   },
   {
     question: 'Heb je verder nog vragen, opmerkingen of suggesties, vermeld deze dan hier.',
-    answer: 'placeholder',
+    answer: 'https://github.com/tseidler',
+    background: {
+      type: Background,
+      options: {
+        styles: {
+          background: 'url(/assets/background_ogd_bus.jpg)',
+          backgroundSize: 'cover'
+        }
+      }
+    }
   }
 ];

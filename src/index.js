@@ -4,7 +4,7 @@ import {data, images} from 'jaargesprek2016/questions_answers';
 
 setTimeout(() => {
   let audio = document.getElementById('music');
-  audio.volume = 0.05;
+  audio.volume = 0.1;
   audio.loop = true;
   audio.play();
 }, 5000);
