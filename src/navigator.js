@@ -16,6 +16,7 @@ export default class Navigator {
     this.activeBackgroundNumber = 0;
 
     document.addEventListener('keydown', (e) => this.handleInput(e.keyCode));
+    document.addEventListener('click', () => this.handleInput(39));
   }
 
   handleInput(keyCode) {
