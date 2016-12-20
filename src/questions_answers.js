@@ -1,6 +1,8 @@
 import Background from 'backgrounds/background';
 import SpriteBackground from 'backgrounds/spritebackground';
 
+let separator = '                 ';
+
 export const images = [
   {
     name: 'coconut_logo',
@@ -119,7 +121,7 @@ export const data = [
       type: Background,
       options: {
         styles: {
-          background: 'url(/assets/background_postnl.png)',
+          background: 'url(/assets/background_postnl.jpg)',
           backgroundSize: 'cover'
         }
       }
@@ -132,7 +134,7 @@ export const data = [
       type: Background,
       options: {
         styles: {
-          background: 'url(/assets/background_belemmeringen.png)',
+          background: 'url(/assets/background_belemmeringen.jpg)',
           backgroundSize: 'cover'
         }
       }
@@ -214,7 +216,7 @@ export const data = [
       type: Background,
       options: {
         styles: {
-          background: 'url(/assets/background_support.png)',
+          background: 'url(/assets/background_support.jpg)',
           backgroundSize: 'cover'
         }
       }
